@@ -22,13 +22,14 @@
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/theme_icon1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"
         android:text="City Flyable Sectors"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/theme_icon1" />
 
     <Spinner
         android:id="@+id/citySpinner"
@@ -45,22 +46,21 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/computeButton"
+        style="@style/CustomComputeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:text="Compute"
-        android:backgroundTint="@null"
-        android:background="@drawable/dark_compute_button_background"
-        app:layout_constraintTop_toBottomOf="@id/citySpinner"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/citySpinner" />
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Results will be displayed here"
+        android:layout_marginLeft="60dp"
         android:textColor="@color/white"
         android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
@@ -68,5 +68,37 @@
         app:layout_constraintTop_toBottomOf="@id/computeButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- LinearLayout moved inside ConstraintLayout -->
+    <LinearLayout
+        android:id="@+id/arrows_container"
+        android:layout_width="399dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultTextView">
+        <!-- Add ImageView elements here -->
+        <ImageView
+            android:id="@+id/left_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/arrow_left"
+            android:src="@drawable/ic_arrow_left" />
+
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/arrow_right"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

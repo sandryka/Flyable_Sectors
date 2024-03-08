@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Other theme properties -->
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="CustomComputeButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#262655</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>
